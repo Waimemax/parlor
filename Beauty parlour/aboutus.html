@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nala's Touch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-links">
+            <img src="Images/logo2.PNG" alt="Nala's Touch Logo">
+            <h1>Nala's Touch</h1>
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <button>Book now</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="aboutus-section">
+        <div class="aboutus">
+            <h1>About Nala’s Touch</h1>
+            <p>
+                Nala’s Touch is a modern beauty parlor dedicated to enhancing natural beauty through professional
+                and personalized services. We provide a calm and welcoming space where clients can relax
+                and enjoy quality beauty care.
+            </p>
+
+            <h2>What We Do</h2>
+            <p>
+                Our services include hair styling, makeup, nail care such as tips and gel nails,
+                skincare, and relaxing spa treatments. Each service is tailored to meet the individual
+                needs of our clients.
+            </p>
+
+            <h2>Our Commitment</h2>
+            <p>
+                We are committed to using quality products, maintaining high hygiene standards,
+                and delivering excellent customer service to ensure every visit is a great experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="about-cta">
+        <h2>Feel Confident. Feel Beautiful.</h2>
+        <p>Book your appointment online and let us take care of the rest.</p>
+        <button>Book Appointment</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Nala's Touch</h2>
+            <p>Enhancing natural beauty through professional and personalized care.</p>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">TikTok</a>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Nala's Touch. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <h2>Book an Appointment</h2>
+
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+
+            <select required>
+                <option value="">Select Service</option>
+                <option>Nail Care & Gel</option>
+                <option>Hair Styling</option>
+                <option>Makeup</option>
+                <option>Spa & Skincare</option>
+            </select>
+
+            <input type="date" required>
+            <input type="time" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

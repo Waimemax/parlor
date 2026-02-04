@@ -1,0 +1,289 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Navbar container */
+.nav {
+    background: linear-gradient(90deg, #0f4c81, #1e88e5);
+    padding: 15px 40px;
+}
+
+/* Navbar content */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Logo image */
+.nav-links img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Brand name */
+.nav-links h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: auto; /* pushes links to the right */
+}
+
+/* Navigation links */
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffcc70;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc70;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Book now button */
+.nav-links button {
+    background-color: #ffcc70;
+    color: #0f4c81;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links button:hover {
+    background-color: #ffd98e;
+    transform: scale(1.05);
+}
+/* Shared section styling */
+.aboutus-section,
+.services-section,
+.contact-section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+/* Section headings */
+.aboutus h1,
+.services h1,
+.contact-section h1 {
+    font-size: 32px;
+    color: #0f4c81;
+    margin-bottom: 20px;
+}
+
+/* Subheading */
+.aboutus h2 {
+    font-size: 20px;
+    color: #1e88e5;
+    margin-bottom: 15px;
+}
+
+/* Paragraph text */
+.aboutus p,
+.services p,
+.contact-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* About section background */
+.aboutus-section {
+    background-color: #f4f8fc;
+}
+
+/* Services section background */
+.services-section {
+    background-color: #ffffff;
+}
+
+/* Contact section background */
+.contact-section {
+    background: linear-gradient(180deg, #0f4c81, #1e88e5);
+}
+
+/* Contact section text color */
+.contact-section h1,
+.contact-section p {
+    color: #ffffff;
+}
+
+/* Buttons (shared style) */
+.aboutus button,
+.services button,
+.contact-section + button {
+    background-color: #ffcc70;
+    color: #0f4c81;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Button hover effect */
+.aboutus button:hover,
+.services button:hover,
+.contact-section + button:hover {
+    background-color: #ffd98e;
+    transform: scale(1.05);
+}
+
+/* Contact Us button positioning */
+.contact-section + button {
+    display: block;
+    margin: 40px auto 80px;
+}
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #0f4c81, #1e88e5);
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Footer content wrapper */
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Brand name */
+.footer-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Footer text */
+.footer-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Social links */
+.social-links a {
+    color: #ffcc70;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Copyright text */
+.footer-copy {
+    font-size: 14px;
+    opacity: 0.85;
+}
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+    background: #ffffff;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 18px;
+    position: relative;
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #0f4c81;
+}
+
+/* Modal heading */
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #0f4c81;
+}
+
+/* Form fields */
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Submit button */
+#bookingForm button {
+    background: #ffcc70;
+    color: #0f4c81;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#bookingForm button:hover {
+    background: #ffd98e;
+}
