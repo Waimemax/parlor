@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nala's Touch</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-links">
+            <img src="Images/logo2.PNG" alt="logo-image">
+            <h1>Nala's Touch</h1>
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <button>Book now</button>
+        </div>
+    </div>
+    <div class="aboutus-section">
+        <div class="aboutus">
+            <h1>About Us</h1>
+            <h2>Who We Are</h2>
+            <p>Nala's Touch is a modern beauty parlor focused on enhancing natural beauty through professional and personalized services. We offer expert hair styling, makeup, nailcare, and skincare in a relaxing and welcoming environment. Our goal is to help every client feel confident, beautiful, and refreshed.</p>
+            <a href="aboutus.html">
+                <button>Learn More</button>
+            </a>
+        </div>
+    </div>
+    <div class="services-section">
+        <div class="services">
+            <h1>Our Services</h1>
+            <p>We provide a variety of proffeseional beauty and spa services designed to help you look and feel your best. From nail tips and gel nails to relaxing spa treatments, our services are tailored to ,eet your needs.</p>
+            <p>Clients can conviniently book appointments online and arrive knowing their spot is reserved.</p>
+            <a href="services.html">
+                <button>View Services</button>
+            </a>
+        </div>
+    </div>
+    <div class="contact-section">
+        <h1>Get In Touch</h1>
+        <p>Have questions or want to book an appointment? We'd love to hear from you. Reach out to us via phone or email, or book your appointment online for a smooth and stress-free experience.</p>
+        <p><b>Hours:</b>
+            Mon-Sat, 9am--7pm | Sun: By appointment
+        </p>
+        <p><b>Location:</b> Nairobi</p>
+        
+    </div>
+        <button id="contactBtn">Contact Us</button>
+
+
+
+    <footer class="footer">
+    <div class="footer-content">
+        <h2>Nala's Touch</h2>
+        <p>Enhancing natural beauty through professional and personalized care.</p>
+
+        <div class="social-links">
+            <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/254XXXXXXXXX" target="_blank" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Nala's Touch. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+    <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <h2>Book an Appointment</h2>
+
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+
+            <select required>
+                <option value="">Select Service</option>
+                <option>Nail Care & Gel</option>
+                <option>Hair Styling</option>
+                <option>Makeup</option>
+                <option>Spa & Skincare</option>
+            </select>
+
+            <input type="date" required>
+            <input type="time" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+<script src="style.js"></script>
+</body>
+</html>

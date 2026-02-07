@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Nala's Touch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-links">
+            <img src="Images/logo2.PNG" alt="Nala's Touch Logo">
+            <h1>Nala's Touch</h1>
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <button>Book now</button>
+        </div>
+    </div>
+
+    <!-- Services Intro -->
+    <section class="services-intro">
+        <h1>Our Services</h1>
+        <p>
+            At Nala’s Touch, we offer a wide range of professional beauty and spa services designed to help
+            you relax, refresh, and feel confident. Each service is delivered with care, hygiene, and attention
+            to detail.
+        </p>
+    </section>
+
+    <!-- Services List -->
+    <section class="services-list">
+
+        <!-- Nail Services -->
+        <div class="service-item">
+            <img src="Images/nails.jpeg" alt="Nail Services">
+            <div class="service-info">
+                <h2>Nail Care & Enhancements</h2>
+                <p>
+                    Our nail services include tips, gel nails, manicures, and pedicures designed to keep
+                    your nails healthy, stylish, and long-lasting. We use quality products and follow strict
+                    hygiene practices.
+                </p>
+                <p><strong>Includes:</strong> Tips, Gel Nails, Manicure, Pedicure</p>
+                <p><strong>Estimated Time:</strong> 45–90 minutes</p>
+                <button onclick="bookService('Nail Care & Enhancements', 1500)">Book Nail Service</button>
+            </div>
+        </div>
+
+        <!-- Hair Services -->
+        <div class="service-item">
+            <img src="Images/hair.webp" alt="Hair Styling">
+            <div class="service-info">
+                <h2>Hair Styling & Treatments</h2>
+                <p>
+                    From everyday styling to special occasions, our hair services are tailored to suit
+                    your personal style. We focus on hair health while delivering beautiful results.
+                </p>
+                <p><strong>Includes:</strong> Styling, Treatments, Braiding, Coloring</p>
+                <p><strong>Estimated Time:</strong> 60–120 minutes</p>
+                <button onclick="bookService('Hair Service', 1200)">Book Hair Service</button>
+            </div>
+        </div>
+
+        <!-- Makeup Services -->
+        <div class="service-item">
+            <img src="Images/makeup2.webp" alt="Makeup Services">
+            <div class="service-info">
+                <h2>Makeup Services</h2>
+                <p>
+                    Our professional makeup services enhance your natural beauty for events, photoshoots,
+                    or everyday glam. We work with your skin tone and preferences for flawless results.
+                </p>
+                <p><strong>Includes:</strong> Natural Makeup, Glam Makeup, Touch-Ups</p>
+                <p><strong>Estimated Time:</strong> 45–60 minutes</p>
+                <button onclick="bookService ('Makeup Services', 1500)">Book Makeup Service</button>
+            </div>
+        </div>
+
+        <!-- Spa & Skincare -->
+        <div class="service-item">
+            <img src="Images/spa.webp" alt="Spa and Skincare">
+            <div class="service-info">
+                <h2>Spa & Skincare Treatments</h2>
+                <p>
+                    Relax and rejuvenate with our spa and skincare treatments designed to refresh your skin
+                    and body. Perfect for stress relief and self-care.
+                </p>
+                <p><strong>Includes:</strong> Facials, Body Treatments, Relaxation Services</p>
+                <p><strong>Estimated Time:</strong> 60–90 minutes</p>
+                <button onclick="bookService ('Spa & Skincare', 1800)">Book Spa Service</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Important Note -->
+    <section class="services-note">
+        <p>
+            <strong>Important:</strong> We recommend booking your appointment in advance to ensure availability.
+            Walk-ins are welcome based on availability.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Nala's Touch</h2>
+            <p>Enhancing natural beauty through professional and personalized care.</p>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">TikTok</a>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Nala's Touch. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <h2>Book an Appointment</h2>
+
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+
+            <select required>
+                <option value="">Select Service</option>
+                <option>Nail Care & Gel</option>
+                <option>Hair Styling</option>
+                <option>Makeup</option>
+                <option>Spa & Skincare</option>
+            </select>
+
+            <input type="date" required>
+            <input type="time" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function bookService(serviceName, price) {
+    // Get existing cart or create new
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add service
+    cart.push({
+        name: serviceName,
+        price: price
+    });
+
+    // Save to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirect to cart page
+    window.location.href = 'cart.html';
+}
+</script>
+
+
+</body>
+</html>

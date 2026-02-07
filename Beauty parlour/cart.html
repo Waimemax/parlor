@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Cart | Nala's Touch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fb;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0f4c81;
+        }
+
+        .cart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .services, .cart {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .service-item, .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .service-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .service-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        button {
+            background: #ffcc70;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #0f4c81;
+        }
+
+        button:hover {
+            background: #ffd98e;
+        }
+
+        .remove-btn {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .total {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            color: #0f4c81;
+        }
+
+        .checkout {
+            margin-top: 25px;
+        }
+
+        .checkout input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .checkout button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Book Your Services</h1>
+
+<div class="cart-container">
+
+    <!-- SERVICES -->
+    <div class="services">
+        <h2>Available Services</h2>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/hair.webp" alt="Hair Styling">
+                <span>Hair Styling – KES 2,500</span>
+            </div>
+            <button onclick="addToCart('Hair Styling', 2500)">Add</button>
+        </div>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/makeup1.png" alt="Makeup">
+                <span>Makeup – KES 3,000</span>
+            </div>
+            <button onclick="addToCart('Makeup', 3000)">Add</button>
+        </div>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/nails.jpeg" alt="Nail Care">
+                <span>Nail Care – KES 1,500</span>
+            </div>
+            <button onclick="addToCart('Nail Care', 1500)">Add</button>
+        </div>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/skinandfacial.webp" alt="Facial Services">
+                <span>Facial Services – KES 1,200</span>
+            </div>
+            <button onclick="addToCart('Facial Services', 1200)">Add</button>
+        </div>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/bodyandspa.jpg" alt="Body and Spa">
+                <span>Body and Spa – KES 1,600</span>
+            </div>
+            <button onclick="addToCart('Body and Spa', 1600)">Add</button>
+        </div>
+
+        <div class="service-item">
+            <div class="service-info">
+                <img src="Images/waxing1.webp" alt="Waxing">
+                <span>Waxing – KES 1,500</span>
+            </div>
+            <button onclick="addToCart('Waxing', 1500)">Add</button>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div class="cart">
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="total">
+            Total: KES <span id="totalAmount">0</span>
+        </div>
+
+        <div class="checkout">
+            <input type="email" id="email" placeholder="Enter your email to receive booking confirmation">
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
